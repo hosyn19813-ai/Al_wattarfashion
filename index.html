@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>براند أزياء الوتار | Al-Wattar Fashion</title>
+  
+  <!-- استدعاء خطوط Amiri و IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       1. المتغيرات والأساسيات
+       ========================================== */
+    :root {
+      --bg-dark: #121214;             /* رمادي غامق جداً / فحمي */
+      --bg-card: #1A1A1E;             /* رمادي الكروت والشبكات */
+      --border-color: #2D2D35;        /* حدود ناعمة وحادة */
+      --primary-carob: #4A151B;       /* خرنوبي عميق وفخم */
+      --primary-carob-light: #7A232D; /* خرنوبي أفتح للتفاعلات */
+      --text-main: #E6E6E8;           /* نصوص رئيسية ناصعة بلمسة رمادية */
+      --text-muted: #9E9EA8;          /* نصوص ثانوية دقيقة */
+      --font-serif: 'Amiri', serif;
+      --font-sans: 'IBM Plex Sans Arabic', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 13.5px;
+      line-height: 1.85;
+      letter-spacing: 0.2px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ==========================================
+       2. الهيدر (Header & Navigation)
+       ========================================== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.2rem 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(18, 18, 20, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+    }
+
+    .brand-logo {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text-main);
+    }
+
+    .brand-logo span {
+      color: var(--primary-carob-light);
+    }
+
+    .brand-en {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+    }
+
+    nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+    }
+
+    /* ==========================================
+       3. القسم الرئيسي (Hero)
+       ========================================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 8% 4rem;
+      background: radial-gradient(circle at 80% 20%, rgba(74, 21, 27, 0.25) 0%, rgba(18, 18, 20, 1) 70%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .location-tag {
+      font-size: 0.8rem;
+      color: var(--primary-carob-light);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 850px;
+      margin-bottom: 1.8rem;
+      color: #FFFFFF;
+    }
+
+    .hero-description {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin-bottom: 3rem;
+      line-height: 2;
+    }
+
+    .btn-action {
+      display: inline-block;
+      padding: 0.8rem 2.2rem;
+      background-color: var(--primary-carob);
+      color: #FFFFFF;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--primary-carob-light);
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    .btn-action:hover {
+      background-color: var(--primary-carob-light);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================
+       4. فلسفة الدار والمديح (About)
+       ========================================== */
+    .about-section {
+      padding: 6rem 8%;
+      border-bottom: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about-content {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      line-height: 2.2;
+      color: var(--text-main);
+      text-align: justify;
+    }
+
+    .about-content strong {
+      color: #FFFFFF;
+      font-weight: 700;
+      border-bottom: 1px solid var(--primary-carob-light);
+    }
+
+    /* ==========================================
+       5. المميزات الحرفية (Craft Features)
+       ========================================== */
+    .features-section {
+      padding: 6rem 8%;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature-card {
+      background-color: var(--bg-card);
+      padding: 2.5rem;
+      border: 1px solid var(--border-color);
+      transition: border-color 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--primary-carob-light);
+    }
+
+    .feature-num {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--primary-carob-light);
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #FFFFFF;
+    }
+
+    .feature-text {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    /* ==========================================
+       6. العنوان والموقع (Location)
+       ========================================== */
+    .location-section {
+      padding: 6rem 8%;
+      background-color: var(--bg-card);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .location-info h3 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #FFFFFF;
+    }
+
+    .address-box {
+      border-right: 2px solid var(--primary-carob);
+      padding-right: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .address-box p {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .address-box .detail {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* ==========================================
+       7. الفوتر
+       ========================================== */
+    footer {
+      padding: 2.5rem 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background-color: var(--bg-dark);
+      text-align: center;
+    }
+
+    /* تجاوب الشاشات الصغيرة */
+    @media (max-width: 900px) {
+      .about-section, .location-section { grid-template-columns: 1fr; gap: 2rem; }
+      .grid-container { grid-template-columns: 1fr; }
+      .hero-title { font-size: 2.2rem; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header>
+    <div class="brand-logo">الوتار <span>.</span></div>
+    <div class="brand-en">AL-WATTAR FASHION</div>
+  </header>
+
+  <!-- القسم الرئيسي -->
+  <section class="hero">
+    <div class="location-tag">حماة — سوريا</div>
+    <h1 class="hero-title">هوية أنثوية تُصاغ بدقة الحرفة وركائز المظهر الفاخر.</h1>
+    <p class="hero-description">
+      في براند "الوتار"، لا نتعامل مع الأزياء كقطع قماش مجردة، بل كخطوط هندسية تُبرز حضور المرأة الواثقة. تشكيلاتنا حصرية وصُممت بعناية لتمنحكِ هيبة الحضور والتألق الدائم.
+    </p>
+    <a href="#location" class="btn-action">استكشفي المقر الرئيسي ←</a>
+  </section>
+
+  <!-- قسم المديح وفلسفة البراند -->
+  <section id="about" class="about-section">
+    <div class="section-label">عن الدار —</div>
+    <div class="about-content">
+      في عالم الموضة المعاصر، لا يقتصر التميز على مجرد مسايرة الصيحات، بل يرتكز على ابتکار حضور لا يُنسى. هنا في <strong>دار الوتار للأزياء</strong>، نُعيد صياغة مفهوم الأناقة النسائية الفاخرة عبر قطع تُحاك بدقة متناهية وخامات عالمية ينتقى كل ملمس فيها بعناية. نحن نؤمن بأن كل امرأة تستحق إطلالة تعكس قوتها ورقتها في آن واحد، لتكون أزياء الوتار خياركِ الموثوق في كل محفل.
+    </div>
+  </section>
+
+  <!-- قسم مميزات الحرفة -->
+  <section id="features" class="features-section">
+    <div class="section-label">ركائز التميز —</div>
+    <div class="grid-container">
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <div class="feature-title">أصالة الخياطة العصرية</div>
+        <div class="feature-text">كل تصميم يحمل بصمة فريدة من نوعها، نختار الأقمشة باللمس والتجربة لتكون الهيكلية متماسكة والنتيجة مبهرة.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <div class="feature-title">قصّات هندسية دقيقة</div>
+        <div class="feature-text">نعتمد مقاييس مدروسة تبرز جمالية القوام وتمنح حركة حرة وسلسة مع الحفاظ على وقار القطعة.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <div class="feature-title">إنتاج حصري وبكميات محدودة</div>
+        <div class="feature-text">نحافظ على تفرد عارضينا بإنتاج قطع محدودة التكرار لضمان خصوصية إطلالتكِ في كل مناسبة.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم العنوان والموقع -->
+  <section id="location" class="location-section">
+    <div class="location-info">
+      <div class="section-label" style="margin-bottom: 1rem;">زيارة المعرض —</div>
+      <h3>نرحب بكِ في صالتنا الرئيسية</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">تجربة تسوق شخصية تليق بتطلعاتكِ، مع استشارات مخصصة لتنسيق مظهركِ.</p>
+      
+      <div class="address-box">
+        <p><strong>مدينة حماة</strong></p>
+        <p class="detail">شارع ابن الرشد</p>
+        <p class="detail">بعد الستي سنتر — باتجاه مدرسة السيدة عائشة</p>
+      </div>
+    </div>
+
+    <div style="border: 1px solid var(--border-color); padding: 3rem; background-color: var(--bg-dark); text-align: center;">
+      <p style="font-family: var(--font-serif); font-size: 1.5rem; color: #FFFFFF; margin-bottom: 1rem;">أوقات الاستقبال</p>
+      <p style="color: var(--text-muted); font-size: 0.85rem;">يومياً من الساعة 10:00 صباحاً حتى 9:00 مساءً</p>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
+  <footer>
+    <div>أزياء الوتار &copy; 2026. جميع الحقوق محفوظة.</div>
+  </footer>
+
+</body>
+</html>
